@@ -1,0 +1,31 @@
+<tmpl_include name="/home/www/htdocs/GG2/templates/header.tmpl">
+
+<style type="text/css">
+td {vertical-align: top;}
+</style>
+
+<h3>GrainGenes Colleague Insert</h3>
+
+<tmpl_if name="messages"><p style="color: red;"><tmpl_var name="messages"></p></tmpl_if>
+
+<table>
+<form method="post" action="colleague_insert.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<td><b>name</b></td>
+<td><input type="text" name="name" value="" size="25"></td>
+</tr>
+<tr>
+<td><b>lastupdate</b></td>
+<td><input type="text" name="lastupdate" value="" size="25"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><table><tr>
+    <td><input type="submit" name="insert" value="insert"></td>
+    <td><input type="submit" name="cancel" value="cancel"></td>
+</tr></table></td>
+</tr>
+</form>
+</table>
+
+<tmpl_include name="/home/www/htdocs/GG2/templates/footer.tmpl">

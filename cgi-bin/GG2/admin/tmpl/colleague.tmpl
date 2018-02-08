@@ -1,0 +1,253 @@
+<tmpl_include name="/home/www/htdocs/GG2/templates/header.tmpl">
+
+<style type="text/css">
+td {vertical-align: top;}
+</style>
+
+<h3>GrainGenes Admin Colleague Update</h3>
+
+<tmpl_if name="messages"><p style="color: red;"><tmpl_var name="messages"></p></tmpl_if>
+
+<tmpl_loop name="colleague">
+
+<table>
+
+<tr>
+<form method="post" action="colleague_update.cgi" enctype="application/x-www-form-urlencoded">
+<td><b>id</b></td>
+<td><input type="hidden" name="id" value="<tmpl_var name="id">"><tmpl_var name="id"></td>
+</tr>
+<tr>
+<td><b>name</b></td>
+<td><input type="text" name="name" value="<tmpl_var name="name">" size="25"></td>
+</tr>
+<tr>
+<td><b>lastupdate</b></td>
+<td><input type="text" name="lastupdate" value="<tmpl_var name="lastupdate">" size="25"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+<table><tr>
+<td><input type="submit" name="update" value="update"></td>
+</form>
+<form method="post" action="colleague_delete.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="submit" name="delete" value="delete"></td>
+</form>
+<form method="post" action="browse.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="class" value="colleague">
+<td><input type="submit" value="cancel"></td>
+</form>
+</tr></table>
+</td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td><b>address</b></td>
+<td>
+<table border="1">
+<tr>
+<td><u>mail</u></td>
+<td><u>country</u></td>
+<td><u>phone</u></td>
+<td><u>fax</u></td>
+<td><u>telex</u></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tmpl_loop name="address">
+<tr>
+<form method="post" action="colleagueaddress_update.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<input type="hidden" name="colleagueid" value="<tmpl_var name="colleagueid">">
+<td><input type="text" name="mail" value="<tmpl_var name="mail">" size="25"></td>
+<td><input type="text" name="country" value="<tmpl_var name="country">" size="12"></td>
+<td><input type="text" name="phone" value="<tmpl_var name="phone">" size="15"></td>
+<td><input type="text" name="fax" value="<tmpl_var name="fax">" size="15"></td>
+<td><input type="text" name="telex" value="<tmpl_var name="telex">" size="15"></td>
+<td><input type="submit" name="update" value="update"></td>
+</form>
+<form method="post" action="colleagueaddress_delete.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="submit" name="delete" value="delete"></td>
+</form>
+</tr>
+</tmpl_loop>
+<form method="post" action="colleagueaddress_insert.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<input type="hidden" name="colleagueid" value="<tmpl_var name="id">">
+<td><input type="text" name="mail" value="" size="25"></td>
+<td><input type="text" name="country" value="" size="12"></td>
+<td><input type="text" name="phone" value="" size="15"></td>
+<td><input type="text" name="fax" value="" size="15"></td>
+<td><input type="text" name="telex" value="" size="15"></td>
+<td><input type="submit" name="insert" value="insert"></td>
+<td>&nbsp;</td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td><b>email</b></td>
+<td>
+<table border="1">
+<tr>
+<td><u>email</u></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tmpl_loop name="email">
+<tr>
+<form method="post" action="colleagueemail_update.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<input type="hidden" name="colleagueid" value="<tmpl_var name="colleagueid">">
+<td><input type="text" name="email" value="<tmpl_var name="email">" size="25"></td>
+<td><input type="submit" name="update" value="update"></td>
+</form>
+<form method="post" action="colleagueemail_delete.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="submit" name="delete" value="delete"></td>
+</form>
+</tr>
+</tmpl_loop>
+<form method="post" action="colleagueemail_insert.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<input type="hidden" name="colleagueid" value="<tmpl_var name="id">">
+<td><input type="text" name="email" value="" size="25"></td>
+<td><input type="submit" name="insert" value="insert"></td>
+<td>&nbsp;</td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td><b>image</b></td>
+<td>
+<table border="1">
+<tr>
+<td><u>imagename</u></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tmpl_loop name="image">
+<tr>
+<form method="post" action="colleagueimage_update.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<input type="hidden" name="colleagueid" value="<tmpl_var name="colleagueid">">
+<td><input type="hidden" name="imageid" value="<tmpl_var name="imageid">"><tmpl_var name="imagename"></td>
+<td><input type="submit" value="update"></td>
+</form>
+<form method="post" action="colleagueimage_delete.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="submit" name="delete" value="delete"></td>
+</form>
+</tr>
+</tmpl_loop>
+<form method="post" action="colleagueimage_insert.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<input type="hidden" name="colleagueid" value="<tmpl_var name="id">">
+<td>&nbsp;</td>
+<td><input type="submit" value="insert"></td>
+<td>&nbsp;</td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td><b>obtainedfrom</b></td>
+<td>
+<table border="1">
+<tr>
+<td><u>sourcename</u></td>
+<td><u>date</u></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tmpl_loop name="obtainedfrom">
+<tr>
+<form method="post" action="colleagueobtainedfrom_update.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<input type="hidden" name="colleagueid" value="<tmpl_var name="colleagueid">">
+<td><input type="hidden" name="sourceid" value="<tmpl_var name="sourceid">"><tmpl_var name="sourcename"></td>
+<td><input type="hidden" name="date" value="<tmpl_var name="date">"><tmpl_var name="date"></td>
+<td><input type="submit" value="update"></td>
+</form>
+<form method="post" action="colleagueobtainedfrom_delete.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="submit" name="delete" value="delete"></td>
+</form>
+</tr>
+</tmpl_loop>
+<form method="post" action="colleagueobtainedfrom_insert.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<input type="hidden" name="colleagueid" value="<tmpl_var name="id">">
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" value="insert"></td>
+<td>&nbsp;</td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td><b>remark</b></td>
+<td>
+<table border="1">
+<tr>
+<td><u>type</u></td>
+<td><u>remark</u></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tmpl_loop name="remark">
+<tr>
+<form method="post" action="colleagueremark_update.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<input type="hidden" name="colleagueid" value="<tmpl_var name="colleagueid">">
+<td><input type="text" name="type" value="<tmpl_var name="type">" size="25"></td>
+<td><textarea name="remark" rows="2" cols="25"><tmpl_var name="remark"></textarea></td>
+<td><input type="submit" name="update" value="update"></td>
+</form>
+<form method="post" action="colleagueremark_delete.cgi" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="submit" name="delete" value="delete"></td>
+</form>
+</tr>
+</tmpl_loop>
+<form method="post" action="colleagueremark_insert.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<input type="hidden" name="colleagueid" value="<tmpl_var name="id">">
+<td><input type="text" name="type" value="" size="25"></td>
+<td><textarea name="remark" rows="2" cols="25"></textarea></td>
+<td><input type="submit" name="insert" value="insert"></td>
+<td>&nbsp;</td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+
+</table>
+
+</tmpl_loop>
+
+<tmpl_include name="/home/www/htdocs/GG2/templates/footer.tmpl">

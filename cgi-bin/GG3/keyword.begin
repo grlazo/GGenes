@@ -1,0 +1,448 @@
+1	1	'1s0.8 region'
+51	206	15-acetyldeoxynivalenol
+101	74	2,4-diacetylphloroglucinol (dapg)
+151	117	3 genes
+201	158	5,8s rrna
+251	250	a fluorescence
+301	300	aba-responsiveness
+351	348	acarbose
+401	398	acgt box
+451	448	acl3 gene
+501	498	acyl-coa oxidase
+551	546	adjuncts
+601	595	aedes-aegypti
+651	645	aerenchyma formation
+701	695	agaricus bisporus
+751	745	agromorphological traits
+801	795	al-toxicity
+851	845	alfalfa medicago sativa
+901	895	allele-specific pcr
+951	943	alloplasmic line
+1001	993	alpha-amylase-1
+1051	1043	aluminium-stress
+1101	1093	amino-acid transporters
+1151	1143	amplified fragment length polymorphism
+1201	1193	analogs and derivatives
+1251	1241	angiosperm
+1301	1291	antagonists
+1351	1340	antifreeze protein
+1401	1390	aouth america
+1451	1440	application rate
+1501	1489	arabidopsis t-dna tag
+1551	1538	ari-e.gp
+1601	1588	ascochyta blight
+1651	1638	aspergillus tubingensis
+1701	1687	atp binding cassette transporter
+1751	1737	autotetraploid
+1801	1787	avena sativa l.
+1851	1837	b chromosomes
+1901	1885	backbone dynamics
+1951	1935	bacteriophages
+2001	1985	barley (1->3),(1->4)-beta-d-glucan
+2051	2034	barley hordeum vulgare l.
+2101	2084	barley yellow mosaic virus (baymv)
+2151	2134	bchh
+2201	2184	bessarabicum
+2251	2234	beta-glucan synthase
+2301	2284	binary cosmid
+2351	2334	biochemical-changes
+2401	2384	biomass input
+2451	2434	biscuits
+2501	2487	blt101 gene
+2551	2532	boron deficiency
+2601	2582	branching enzyme (ec 2.4.1.18)
+2651	2631	bread-malting
+2701	2679	brittle pedicel
+2751	2729	bruchidae
+2801	2779	burkina faso
+2851	2828	c-terminal domain
+2901	2878	calcium chloride
+2951	2928	camp
+3001	2975	capacity
+3051	3025	carbon metabolism
+3101	3074	carrier proteins
+3151	3123	catalytic nucleophile
+3201	3171	cdna cloning
+3251	3221	cell line
+3301	3271	cell-lines
+3351	3321	cenp-b
+3401	3370	cereal enzyme specificity
+3451	3420	chain-reaction
+3501	3470	chemical control
+3551	3520	chickens
+3601	3569	chitin fragments
+3651	3618	chlorophyll content
+3701	3667	chloroplast-transgenic plants
+3751	3717	chromosomal map
+3801	3767	chromosome differentiation
+3851	3815	chromosome-7d
+3901	3864	cicer
+3951	3914	cladistics
+4001	3964	clonal growth
+4051	4014	co2
+4101	4064	coding single nucleotide polymorphism
+4151	4114	cold response
+4201	4164	colonies
+4251	4212	comparative analysis
+4301	4261	complementation-groups
+4351	4311	computer-simulation
+4401	4361	conlon
+4451	4410	contigs
+4501	4460	copper chloride
+4551	4510	correlation-analysis
+4601	4560	coxiii gene
+4651	4610	crop industry
+4701	4660	cross-linked networks
+4751	4710	cryphonectria parasitica
+4801	4760	cultivar specificity
+4851	4810	cutting-frequency
+4901	4859	cynara scolymus
+4951	4909	cytochrome c biogenesis
+5001	4959	cytoplasmic-inheritance
+5051	5009	dapi
+5101	5058	dcmu
+5151	5106	decontamination
+5201	5155	deficit
+5251	5205	delta-1-pyrroline-5-carboxylate synthetase
+5301	5255	depth
+5351	5305	developing pea seeds
+5401	5355	diagnostic
+5451	5404	dietary carbohydrate
+5501	5454	digenic-epistasis
+5551	5504	direct gene-transfer
+5601	5554	disease resistance response
+5651	5604	distance analysis
+5701	5654	diurnal variation
+5751	5704	dna copy number
+5801	5753	dna mutational analysis
+5851	5803	domain
+5901	5853	double-stranded rna
+5951	5902	draught stress
+6001	5950	dry-matter accumulation
+6051	5999	dwarf cultivars
+6101	6047	early embryogenesis
+6151	6097	economy
+6201	6147	eif4e-binding protein
+6251	6197	elegans
+6301	6247	elymus fibrosus
+6351	6297	embl/x54689-cnne17
+6401	6347	emmer wheat
+6451	6397	endophyte
+6501	6447	endoxyloglucan transferase
+6551	6497	enthalpy
+6601	6547	enzyme isoform
+6651	6596	epithelial cells
+6701	6646	erythrocyte cu,zn-superoxide dismutase
+6751	6696	ethiopian barley
+6801	6746	eurygaster maura
+6851	6796	exogenous ethylene
+6901	6843	expression pattern
+6951	6893	exudation
+7001	6943	factor ef-tu
+7051	6993	farming systems
+7101	7043	female-meiosis
+7151	7092	ferulic acid
+7201	7142	field trials
+7251	7191	fish mapping
+7301	7241	flight
+7351	7291	flours
+7401	7341	fluorescent gish
+7451	7391	follow-up questionnaire
+7501	7441	food-supplements
+7551	7491	fr1 gene
+7601	7541	frequency-distribution
+7651	22203	Functional compensation
+7701	7638	fungal vector
+7751	7688	fusarium-moniliforme
+7801	7738	gaeumannomyces phialophora complex
+7851	7788	gamma-rays
+7901	7837	ge interaction
+7951	7887	GENBANK-X63197
+8001	7937	gene dosage effect
+8051	7985	gene movement
+8101	8035	gene-for-gene
+8151	8085	genetic  of aluminum tolerance
+8201	8134	genetic fingerprint
+8251	8183	genetic resource collection
+8301	8232	genetically modified
+8351	8279	genome origin
+8401	8324	genomic library
+8451	8372	genotypic and phenotypic selection
+8501	8421	germin gene
+8551	8471	gibberella acuminata
+8601	8520	glcnac
+8651	8570	glu b1 locus
+8701	8616	glucose-transporter
+8751	8666	glutathione transferases
+8801	8716	glutenin polymers
+8851	8766	glycosylases
+8901	8816	gp
+8951	22292	Grain size
+9001	8915	granule size distribution
+9051	8964	green revolution
+9101	9014	growing pigs
+9151	9064	growth-promoters
+9201	9113	guttation
+9251	9163	hairy peduncle
+9301	9213	hardiness
+9351	9262	health foods
+9401	9310	helianthus tuberosus
+9451	9360	herbicide tolerant
+9501	9409	heterotrimeric g-proteins
+9551	9457	high mobility group
+9601	9505	high-performance liquid chromatography
+9651	9554	histone deacetylase
+9701	9604	hmwg-dx5
+9751	9653	homogeneity
+9801	9703	hordeum (germination)
+9851	9752	hordeum vulgare subsp.
+9901	9802	host-parasite coevolution
+9951	9851	human
+10001	9901	hybrid breeding
+10051	9951	hydrophobic cluster-analysis
+10101	10000	hypersensitive
+10151	10050	ick1
+10201	10099	imidazolinone herbicides
+10251	10149	imp
+10301	10198	in-situ
+10351	10248	indel
+10401	10296	induced leaf senescence
+10451	10346	inflorescence density
+10501	10395	innate immunity
+10551	10445	insertion mutagenesis
+10601	10495	inter-retrotransposon amplified polymorphism
+10651	10545	intermediate wheatgrass
+10701	10594	interspecific-hybridization
+10751	10643	introgressive lines
+10801	10693	ion uptake
+10851	10743	irrigated-conditions
+10901	10793	isolated-nuclei
+10951	10843	issrs
+11001	10892	joint scaling test
+11051	10940	kengyilia batalinii var.nana
+11101	10985	kinetic-parameters
+11151	11035	l em thell
+11201	11085	lactoglobulins
+11251	11135	late blight
+11301	11185	leaf base
+11351	11234	leaf sheaths
+11401	11284	legume
+11451	11334	leucine-zipper protein
+11501	11384	light regulation
+11551	11434	limited proteolytic sites
+11601	11483	linum
+11651	11533	lmw 2
+11701	11582	lolium
+11751	11632	lovrin 10
+11801	11682	lr1
+11851	11731	lutonarin
+11901	11781	mads
+11951	11831	maize homolog
+12001	11881	malabsorption
+12051	11931	malting
+12101	11981	mapk cascade
+12151	12030	markers
+12201	12079	matrix
+12251	12129	meal
+12301	12179	mediterranean-climate
+12351	12228	membrane anchor
+12401	12278	Messenger RNA expression
+12451	12326	metaltolerance
+12501	12376	mi
+12551	12425	microdichium nivale
+12601	12475	microsatellite molecular markers
+12651	12524	midge resistance gene
+12701	12574	minichromosome
+12751	12623	mitosis
+12801	12673	mlo gene
+12851	12723	moisture-content
+12901	12772	Molecular markers
+12951	12822	molecular-mapping
+13001	12872	monocotyledon
+13051	12922	morphological model
+13101	12972	mrna fingerprinting
+13151	13022	multiple forms
+13201	13071	mustard
+13251	13121	mycosphaerella-graminicola
+13301	13171	n-ethyl-n-nitrosourea
+13351	13220	nadph-protochlorophyllide oxidoreductase
+13401	13269	NBS-LRR
+13451	13319	negative and positive interference
+13501	13368	neural networks
+13551	13417	nicotiana glauca
+13601	13467	nitrification
+13651	13517	nitrogen use efficiency
+13701	13567	non-kranz
+13751	13615	noodle
+13801	13665	npk fertilizers
+13851	13715	nuclease
+13901	13764	nucleotide-substitution
+13951	13813	nutrient sources
+14001	13863	oat crown rust
+14051	13913	oilseed
+14101	13963	oocyte
+14151	14013	organelle ribosome chloroplast
+14201	14063	orthology
+14251	14113	osmotic-pressure
+14301	14163	oxidative cross-linking
+14351	14213	p450
+14401	14262	papillae
+14451	14312	particle bombardment
+14501	14361	pathogen cladosporium-fulvum
+14551	14411	pattern recognition
+14601	14460	peanut
+14651	14510	pentosans
+14701	14560	perennial-habit
+14751	14609	pest resistance
+14801	14659	phase
+14851	14709	phenotypic selection
+14901	14759	phosphatidylserines
+14951	14809	phosphotransferases (alcohol group acceptor)
+15001	14857	photosynthetic electron-transport
+15051	14906	phylogeny and systematics
+15101	14956	phytoalexins
+15151	15006	phytotoxicity
+15201	15055	pisum sativum seedlings
+15251	15105	plant derived smoke
+15301	15155	plant infection
+15351	15205	plant protein
+15401	15255	plant-embryos
+15451	15304	plasticity
+15501	15359	pm13
+15551	15404	pollen dissemination
+15601	15454	polycomb group gene
+15651	15504	polymorphism rflp
+15701	15553	polyvinylpolypyrrolidone
+15751	15603	portugal
+15801	15653	potato d-enzyme
+15851	15703	ppd1 gene
+15901	15753	preferences
+15951	15802	prince edward island
+16001	15852	progression
+16051	22172	prophase I
+16101	15951	protein data-bank
+16151	16001	protein phosphatase 2a
+16201	16051	protein-isolates
+16251	16100	proteomics
+16301	16150	pseudo-testcross
+16351	16198	ptr toxa
+16401	16244	pufferfish fugu
+16451	16293	pyricularia
+16501	16338	qtlxe interaction
+16551	16384	quantitative trait locus
+16601	16434	race 1
+16651	16484	random allocation
+16701	16534	rapid-determination
+16751	16584	rdrp
+16801	16632	reciprocal transplant
+16851	16682	recombined genome
+16901	16732	reducing agents
+16951	16782	regulation of gene expression
+17001	16832	remains
+17051	16882	repetitive sequence
+17101	16932	residuals
+17151	16979	resistance to spot blotch
+17201	17028	restorer lines
+17251	17078	retroposon
+17301	17128	rflp mapping
+17351	17178	rhodobacter-sphaeroides
+17401	17228	ribosome entry site
+17451	17278	rice gene
+17501	17328	rice-wheat sequence
+17551	17377	rna multigene family
+17601	17425	rock phosphate
+17651	17475	root nodule
+17701	17525	ror1-locus
+17751	17575	rt-pcr
+17801	17623	rye chromosomes
+17851	17671	s-protein
+17901	17721	saline soils
+17951	17770	saponins
+18001	17820	scar marker
+18051	17869	screw extrusion
+18101	17919	Secale
+18151	17966	sedimentation test
+18201	18016	seed size
+18251	18066	seedling
+18301	18113	selection responses
+18351	18162	semidwarf
+18401	18210	septoria passerinii
+18451	18258	sequence-alignment
+18501	18305	seropedicae
+18551	18355	shd1-locus
+18601	18404	sibling-species
+18651	18454	silver staining
+18701	18503	single marker
+18751	18549	sister chromatids
+18801	18599	slender mutant
+18851	18645	snp frequency
+18901	18694	soil clay contents
+18951	18744	soil-temperature
+19001	18794	solution culture
+19051	18844	source
+19101	18894	soyabeans
+19151	18944	spartina alterniflora
+19201	18994	specific-combining-ability
+19251	19041	spikelet differentiation
+19301	19091	sporotrichioides
+19351	19139	srwld2 gene
+19401	19185	stamens
+19451	19235	starch-granule-bound-proteins
+19501	19285	stem length
+19551	19333	stop codons
+19601	19383	streak-mosaic-virus
+19651	19431	strobilurin fungicides
+19701	19480	subculturing
+19751	19530	subterranean clover
+19801	19579	sucrose-fructan 6-fructosyltransferase
+19851	19629	sulfate transporter
+19901	19679	supertree
+19951	19729	sustainable agricultural productivity
+20001	19779	synechocystis pcc6803
+20051	19827	systematics
+20101	19877	t.polonicum
+20151	19921	tapesia acuformis
+20201	19970	technology transfer
+20251	20020	temporally regulated expression
+20301	20070	tetraploid potato
+20351	20120	thermal
+20401	20169	tho12 gene
+20451	22201	TILLING
+20501	20266	tobacco by-2 cells
+20551	20316	tomato roots
+20601	20366	trace minerals
+20651	20415	transcription elongation
+20701	20464	transfers
+20751	20514	transgenic potato
+20801	20564	Translation products
+20851	20614	transposon mutagenesis
+20901	20664	trichostatin-a
+20951	20714	triticeae
+21001	20763	triticum durum
+21051	20812	triticum turgidum l.var.dicoccoides
+21101	20862	trypsin-inhibitor proteins
+21151	20912	twist
+21201	20962	ultra-violet light
+21251	21012	uorf
+21301	21062	uv-irradiation
+21351	21112	variation
+21401	21162	vegetative compatibility groups
+21451	21211	vibrio-cholerae
+21501	21260	virulence changes
+21551	21310	vitamin-c status
+21601	21358	walking
+21651	21408	water-limited conditions
+21701	21457	weather damage
+21751	21507	wheal transformation
+21801	21557	wheat flour proteins
+21851	21605	wheat mosaic-virus
+21901	21653	wheat varietal identification
+21951	21703	wheat-stem-sawfly
+22001	21752	wild cereals
+22051	21801	winter type
+22101	21851	wx-a1-protein
+22151	21901	xantha
+22201	21951	xylem parenchyma
+22251	22001	yellow mottle virus
+22301	22050	young wheat plants
+22351	22098	zinc-finger protein

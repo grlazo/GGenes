@@ -1,0 +1,266 @@
+#!/usr/bin/perl
+
+# wheat:/home/www/cgi-bin/graingenes/sql.graingenes, dem 21may04, from:
+# wheat:/home/www/cgi-bin/westsql/sql.west, ddh 26mar04
+
+# premade queries for GG-SQL database raw SQL interface, 
+# http://wheat.pw.usda.gov/cgi-bin/graingenes/sql.cgi?db=graingenes
+
+# batchsql.graingenes
+# NLui, 15Sep2004. for ./batchsql.cgi
+
+$premade = [
+
+[
+"Mapped ESTs from Affymetrix wheat contigs",
+ qq{
+-- For a given Affymetrix contig, e.g. 
+-- TaAffx.131803.1.S1_at, find any mapped EST that is
+-- in an NSF contig with any EST in that contig.
+select distinct 
+       Affy.name as "Affymetrix contig", 
+       NSF.name as "Mapped contig",
+       sequence.name as "Mapped EST",
+       locus.name as Locus,
+       breakpointinterval.name as Bin
+from sequence as Affy
+  join sequencecontig on sequencecontig.contig_sequenceid = Affy.id
+  join sequence as Member on Member.id = sequencecontig.sequenceid
+  join sequencecontig as sc2 on sc2.sequenceid = Member.id
+  join sequence as NSF on NSF.id = sc2.contig_sequenceid and NSF.name like 'NSFT03P2_%'
+  join sequencecontig as sc3 on sc3.contig_sequenceid = NSF.id
+  join sequence on sequence.id = sc3.sequenceid 
+  join sequenceprobe on sequenceprobe.sequenceid = sequence.id
+  join locusprobe on locusprobe.probeid = sequenceprobe.probeid
+  join locus on locus.id = locusprobe.locusid
+  join breakpointintervalcontainslocus on breakpointintervalcontainslocus.locusid = locus.id
+  join breakpointinterval on breakpointinterval.id = breakpointintervalcontainslocus.breakpointintervalid
+where Affy.name in
+ }
+],
+
+[
+"Map locations of sequences",
+qq{
+--  Loci for a list of sequences.
+--  Examples: CDO57-3, BE438997
+select
+  distinct
+  sequence.name as Sequence,
+  locus.name as Locus,
+  map.name as Map,
+  maplocus.begin as Position
+from probe
+  inner join locusprobe on probe.id = locusprobe.probeid
+  inner join locus on locusprobe.locusid = locus.id
+  inner join maplocus on locus.id = maplocus.locusid
+    and maplocus.begin is not null
+  inner join map on maplocus.mapid = map.id
+  inner join sequenceprobe on probe.id = sequenceprobe.probeid
+  inner join sequence on sequenceprobe.sequenceid = sequence.id
+    where sequence.name in
+ }
+],
+
+
+[
+"Map locations of similar sequences",
+qq{
+-- Map positions of probes with BLAST homology to a 
+-- list of sequences.
+-- Enter a list of GenBank accessions, e.g. AB005878.
+-- To hide columns, add "-- " (and remove any extra comma).
+ select distinct
+  sequence_1.name as Sequence
+  , probe.name as Homologous_Clone
+  , locus.name as Locus
+  , map.name as Map
+  , maplocus.begin as Position
+ from sequence sequence_1
+  left join sequenceblasthits on sequenceblasthits.sequenceid = sequence_1.id
+  left join sequence sequence_2 on sequenceblasthits.accession = sequence_2.name
+  left join sequenceprobe on sequence_2.id = sequenceprobe.sequenceid
+  left join probe on sequenceprobe.probeid = probe.id
+  left join locusprobe on probe.id = locusprobe.probeid
+  left join locus on locusprobe.locusid = locus.id
+  left join maplocus on locus.id = maplocus.locusid
+  -- and maplocus.begin is not null
+  left join map on maplocus.mapid = map.id
+ where sequence_1.name in 
+}
+],
+
+[
+"Author addresses",
+qq{
+-- Author's address information
+-- Enter names in the form "Lastname FI[MI]", e.g. Jones RN
+-- To hide a column, add "-- " (and remove any extra comma).
+ select
+  distinct
+  author.name as Author,
+  colleague.name as Full_Name,
+  colleagueaddress.mail as Mail,
+  colleagueaddress.country as Country,
+  colleagueaddress.phone as Phone,
+  colleagueemail.email as Email
+ from author
+  left join colleague on author.fullname_colleagueid = colleague.id
+  left join colleagueaddress on colleague.id = colleagueaddress.colleagueid
+  left join colleagueemail on colleague.id = colleagueemail.colleagueid
+ where author.name in 
+}
+],
+
+
+[
+"Genes",
+qq{
+-- To display column, remove comment lines "-- " 
+-- To hide column, add "-- " (and remove any extra comma)
+ select
+  distinct
+  gene.name as Gene,
+  geneclass.name as Gene_Class,
+  allele.name as Allele,
+  pathology.name as Pathology,
+  locus.name as Locus,
+  genechromosome.chromosome as Chr,
+  genechromosomearm.chromosomearm as Chr_Arm,
+  map.name as Map,
+  -- maplocus.begin as Location,
+  germplasm.name as Germplasm
+  , generemark.remark as Comment
+ from gene
+  left join genegeneclass on gene.id = genegeneclass.geneid
+  left join geneclass on genegeneclass.geneclassid = geneclass.id
+  left join allelegene on gene.id = allelegene.geneid
+  left join allele on allelegene.alleleid = allele.id
+  left join genepathology on gene.id = genepathology.geneid
+  left join pathology on genepathology.pathologyid = pathology.id
+  left join locusassociatedgene on gene.id = locusassociatedgene.geneid
+  left join locus on locusassociatedgene.locusid = locus.id
+  left join genechromosome on gene.id = genechromosome.geneid
+  left join genechromosomearm on gene.id = genechromosomearm.geneid
+  left join maplocus on locus.id = maplocus.locusid
+   and maplocus.begin is not null
+  left join map on maplocus.mapid = map.id
+  left join genegermplasm on gene.id = genegermplasm.geneid
+  left join germplasm on genegermplasm.germplasmid = germplasm.id
+  left join generemark on gene.id = generemark.geneid
+ where gene.name in 
+}
+],
+
+[
+"Loci",
+qq{
+-- To display columns, remove comment lines "-- " 
+-- To hide columns, add "-- " (and remove any extra comma)
+ select
+  distinct
+  locus.name as Locus,
+  locustype.type as Type,
+  -- locuschromosome.chromosome as Chr,
+  map.name as Map,
+  mapdata.name as Map_Data,
+  gene.name as Associated_Gene,
+  geneclass.name as Gene_Class
+  , probe.name as Probe
+ from locus
+  left join locustype on locus.id = locustype.locusid
+  left join locuschromosome on locus.id = locuschromosome.locusid
+  left join maplocus on locus.id = maplocus.locusid
+  left join map on maplocus.mapid = map.id
+  left join mapdatalocus on locus.id = mapdatalocus.locusid 
+  left join mapdata on mapdatalocus.mapdataid = mapdata.id
+  left join locusassociatedgene on locus.id = locusassociatedgene.locusid
+  left join gene on locusassociatedgene.geneid = gene.id
+  left join genegeneclass on locusassociatedgene.geneid = genegeneclass.geneid
+  left join geneclass on genegeneclass.geneclassid = geneclass.id
+  left join locusprobe on locus.id = locusprobe.locusid
+  left join probe on locusprobe.probeid = probe.id
+ where locus.name in 
+}
+],
+
+[
+"Probes",
+qq{
+-- To display columns, remove comment lines "-- " 
+-- To hide columns, add "-- " (and remove any extra comma)
+ select
+  distinct
+  probe.name as Probe,
+  proberemark.remark as Remark,
+  -- probetype.type as Type,
+  locus.name as Locus,
+  map.name as Map,
+  sequence.name as Sequence
+  , species.name as Species
+ from probe
+  left join proberemark on probe.id = proberemark.probeid
+  left join probetype on probe.id = probetype.probeid
+  left join locusprobe on probe.id = locusprobe.probeid
+  left join locus on locusprobe.locusid = locus.id
+  left join maplocus on locus.id = maplocus.locusid
+  left join map on maplocus.mapid = map.id
+  left join sequenceprobe on probe.id = sequenceprobe.probeid
+  left join sequence on sequenceprobe.sequenceid = sequence.id
+  left join probesourcespecies on probe.id = probesourcespecies.probeid
+  left join species on probesourcespecies.speciesid = species.id
+ where probe.name in 
+}
+],
+
+[
+"Probes and corresponding QTLs",
+ qq{
+-- Enter a list of probe names, e.g. CDO981.  
+-- Returns any QTLs for which those probes are significant markers.
+select 
+  qtl.name as QTL,
+  trait.name as Trait,
+  map.name as 'Map',
+  qtl.chromosomearm as 'Chromosome arm',
+  probe.name as 'Significant marker'
+from qtl
+  left join trait on qtl.traitaffected_traitid=trait.id
+  left join mapqtl on qtl.id=mapqtl.qtlid
+  left join map on mapqtl.mapid=map.id
+  left join qtlsignificantmarker on qtl.id=qtlsignificantmarker.qtlid
+  left join locus on qtlsignificantmarker.locusid=locus.id
+  join locusprobe on locusprobe.locusid=locus.id
+  join probe on probe.id=locusprobe.probeid
+where probe.name in
+}
+],
+
+[
+"---------------------",
+""
+],
+
+[
+"List all tables in GrainGenes-SQL",
+"show tables"
+],
+
+[
+"Show contents of table 'image'",
+"select * from image"
+],
+
+[
+"Show table structure of table 'image'",
+"show columns from image"
+],
+
+[
+"How many records are in table 'image'?",
+"select count(*) as image_count from image"
+]
+
+];
+
+1;

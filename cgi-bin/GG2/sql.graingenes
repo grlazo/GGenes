@@ -1,0 +1,106 @@
+#!/usr/bin/perl
+
+# wheat:/home/www/cgi-bin/graingenes/sql.graingenes, dem 21may04, from:
+# wheat:/home/www/cgi-bin/westsql/sql.west, ddh 26mar04
+
+# premade queries for GG-SQL database raw SQL interface, 
+# http://wheat.pw.usda.gov/cgi-bin/graingenes/sql.cgi?db=graingenes
+
+$premade = [
+
+[
+"Microsatellite primers",
+qq{
+select
+  probe.name as SSR,
+  probeprimer.primeronesequence as Primer_1,
+  probeprimer.primertwosequence as Primer_2,
+  probeprimer.ampconditions as Conditions,
+  probeprimer.size as Size
+from probeprimer
+  inner join probe on probeprimer.probeid = probe.id
+  inner join probetype on probe.id = probetype.probeid
+where probetype.type = 'SSR'
+-- To restrict the query, add the following line:
+-- and probe.name like 'WMC%'
+}
+],
+
+[
+"Maps for specified loci, possibly on a specified chromosome",
+qq{
+-- To search for loci other than WMC loci, edit the line
+-- "where locus.name like '%wmc%'".
+select 
+  locus.name as Locus,
+  map.name as Map,
+  maplocus.begin as Position
+from maplocus
+  inner join map on maplocus.mapid = map.id
+  inner join locus on maplocus.locusid = locus.id
+where locus.name like '%wmc%'
+  and maplocus.begin is not null
+  -- To restrict to chromosome 1D, add this line:
+  -- and map.name like '%-1D'
+order by locus.name
+}
+],
+
+[
+"Loci in common between two maps",
+qq{
+select distinct a.name
+from locus as a
+  inner join mapdatalocus as c on a.id = c.locusid
+  inner join mapdata as d on c.mapdataid = d.id
+  inner join locus as b on a.id = b.id
+  inner join mapdatalocus as e on b.id = e.locusid
+  inner join mapdata as f on e.mapdataid = f.id
+where d.name = 'Barley, HxT'
+  and f.name = 'Barley, SXM'
+order by a.name
+}
+],
+
+[
+"Loci on more than 4 maps",
+qq{
+select
+  locus.name,
+  count(mapdata.id) as mapdata_count
+from mapdatalocus
+  inner join locus on locus.id = mapdatalocus.locusid
+  inner join mapdata on mapdatalocus.mapdataid = mapdata.id
+group by locus.id having mapdata_count > 4
+order by locus.name
+}
+],
+
+[
+"---------------------",
+""
+],
+
+[
+"List all tables in GG-SQL.",
+"show tables"
+],
+
+[
+"Show contents of GG-SQL table 'image'.",
+"select * from image"
+],
+
+[
+"Show table structure of GG-SQL table 'image'.",
+"show columns from image"
+],
+
+[
+"Count the number of records in GG-SQL table 'image'.",
+"select count(*) as image_count from image"
+]
+
+];
+
+1;

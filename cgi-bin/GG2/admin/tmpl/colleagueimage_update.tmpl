@@ -1,0 +1,33 @@
+<tmpl_include name="/home/www/htdocs/GG2/templates/header.tmpl">
+
+<style type="text/css">
+td {vertical-align: top;}
+</style>
+
+<h3>GrainGenes Admin Colleague Image Update</h3>
+
+<tmpl_if name="messages"><p style="color: red;"><tmpl_var name="messages"></p></tmpl_if>
+
+<tmpl_loop name="colleagueimage">
+
+<table border="1">
+<tr>
+<td><u>colleaguename</u></td>
+<td><u>imagename</u></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<form method="post" action="colleagueimage_update.cgi" enctype="application/x-www-form-urlencoded">
+<tr>
+<input type="hidden" name="id" value="<tmpl_var name="id">">
+<td><input type="hidden" name="colleagueid" value="<tmpl_var name="colleagueid">"><tmpl_var name="colleaguename"></td>
+<td><tmpl_var name="imageid"></td>
+<td><input type="submit" name="update" value="update"></td>
+<td><input type="submit" name="cancel" value="cancel"></td>
+</tr>
+</form>
+</table>
+
+</tmpl_loop>
+
+<tmpl_include name="/home/www/htdocs/GG2/templates/footer.tmpl">

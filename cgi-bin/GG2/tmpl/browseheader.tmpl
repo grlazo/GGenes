@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Browse.cgi test</title>
+
+<link rel="stylesheet" href="/tempcss/gg2.css">
+<script src="/js/browsen.js"></script>
+
+</head>
+<body onload="cachDiv()" topmargin="0" marginheight="0" leftmargin="0" rightmargin="13" marginwidth="0">
+
+<table border="0" cellpadding="0" cellspacing="0" width="900">
+
+<tbody>
+    <tr>
+      <td><a href="/GG2/index.shtml"><img src="/ggpages/images/gg_header2.jpg" border="0" alt="GrainGenes Home"></a>
+      </td>
+    </tr>
+</tbody></table>
+
+<br>
+
+<form method="post" action="/cgi-bin/graingenes/search_route.cgi">
+<table border="0" cellpadding="0" cellspacing="0" width="900">
+<tbody>
+<tr><td style="text-align: right; vertical-align: top;">
+	<input type="text" size="40" name="query" value=""></td><td style="vertical-align: top;" >&nbsp
+	<input type="image" src="/ggpages/images/search_db_submit.gif" name="db" value="Search Website" alt="A quick search of the GrainGenes database">   
+	<input type="image" src="/ggpages/images/search_web_submit.gif" name="site" value="Search Database" alt="Search Website">
+<a href="/graingenes/report"><img src="/ggpages/images/trans.gif" WIDTH="1" HEIGHT="1" border="0" alt="invisible"></a>
+
+</td></tr>
+</tbody>
+</table>
+
+</form>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+
+
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;" width="180">
+      <table class="menu" border="0" cellpadding="0" cellspacing="0" width="160">
+        <tbody>
+          <tr>
+            <td>
+            <div class="deadheader"><a href="#">
+GrainGenes Tools<span class="span1">
+GrainGenes Database (the new MySQL version or the classic
+ACEDB one), sequence searches, map viewers.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/browse.cgi">&nbsp;&nbsp;Browse GrainGenes</a></div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/quickquery.shtml">&nbsp;&nbsp;Quick Queries</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/advancedquery.shtml">&nbsp;&nbsp;Advanced Queries</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="http://www.graingenes.org">&nbsp;&nbsp;GrainGenes Classic</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="http://wheat.pw.usda.gov/GG2/blast.shtml">&nbsp;&nbsp;BLAST</a></div>
+            </td>
+          </tr>
+<tr>
+            <td>
+            <div class="links"><a href="http://rye.pw.usda.gov/cmap">&nbsp;&nbsp;CMap</a></div>
+            </td>
+          </tr>
+<tr>
+            <td>
+            <div class="links"><a href="http://rye.pw.usda.gov/cgi-bin/gbrowse/BarleyBinMaps?name=Hordeum-Bins-1H">&nbsp;&nbsp;GBrowse<span class="span15">Barley Bin Map<br>GrainMaps<br>Rice chromosomes vs. cereal genes<br>Wheat Physical EST Maps</span></a></div>
+            </td>
+          </tr>
+   <tr><td height="10"></td></tr>
+          <tr>
+            <td>
+            <div class="deadheader"><a href="#">Query Data Types<span class="span2">
+Datasets of particular interest in GrainGenes SQL.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/ggpages/map_summary.html">&nbsp;&nbsp;Maps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="span14">An organized, annotated table of contents of the GrainGenes maps.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/browse.cgi?class=marker">&nbsp;&nbsp;Genetic Markers<span class="span11">Probes, primers and genes, with links to mapped locations.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/search.cgi?class=sequence">&nbsp;&nbsp;Sequences</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/quickquery.cgi?query=qtls&amp;arg1=">&nbsp;&nbsp;QTLs</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/browse.cgi?class=sequence&amp;query=barley1_*">&nbsp;&nbsp;Gene Expression<span class="span12">Sequences from the Barley1 GeneChip, with links to BarleyBase.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/browse.cgi?class=colleague">&nbsp;&nbsp;Colleagues</a></div>
+            </td>
+          </tr>
+<!-- dem 2oct04 Removed.
+          <tr>
+            <td>
+            <div class="links"><a href="/cgi-bin/graingenes/search.cgi?class=probe;q1=*;e1=ssr">&nbsp;&nbsp;Microsatellites</a></div>
+            </td>
+          </tr>
+-->
+  <tr><td height="10"></td></tr>
+          <tr>
+            <td>
+            <div class="deadheader"><a href="#">Web Resources<span class="span3">Besides the
+Database, the GrainGenes Website includes a large array of other data
+resources, classified by topic here. See also the "Search Website"
+button above.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/genomics.shtml">&nbsp;&nbsp;Genomics</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/maps.shtml">&nbsp;&nbsp;Mapping</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/germplasm.shtml">&nbsp;&nbsp;Germplasm</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/pathology.shtml">&nbsp;&nbsp;Pathology</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/taxonomy.shtml">&nbsp;&nbsp;Taxonomy</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/pubs.shtml">&nbsp;&nbsp;Publications</a></div>
+            </td>
+          </tr><tr><td height="10"></td></tr>
+          <tr>
+            <td>
+            <div class="deadheader"><a href="#">User Services<span class="span4">Job
+openings, conference announcements, how to contribute your data,
+joining the grains mailgroup, ...</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/whatnew.shtml">&nbsp;&nbsp;What's
+New</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/jobs.shtml">&nbsp;&nbsp;Employment</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/calendar.shtml">&nbsp;&nbsp;Calendar</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/submit.shtml">&nbsp;&nbsp;Submit
+Data</a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="links"><a href="/GG2/ggdb.shtml">&nbsp;&nbsp;Database
+Information<span class="span16"> How to join the grains mailgroup.<br>About
+the GrainGenes Website and Database.</span></a></div>
+            </td>
+          </tr><tr><td height="10"></td></tr>
+          <tr>
+            <td>
+            <div class="header"><a href="/GG2/pickGG.shtml">Mirror Sites<span class="span5">Other
+Internet
+sites serving a copy of the GrainGenes Database and/or the
+GrainGenes Website.</span></a></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <div class="header"><script language="JavaScript" type="text/javascript">
+document.write('<a href="mailto:curator' + '@' + 'pw.'+'usda'+'.gov">' + 'Contact Curators' + '<span class="span6">Questions? Comments? Feel free to contact us.<\/span><\/a>');
+</script></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+</td><td style="vertical-align: top;">
+
