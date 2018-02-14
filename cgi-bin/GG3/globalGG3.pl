@@ -20,7 +20,7 @@
 #our $db = "graingenes_myisam";
 our $db = "graingenes";
 our $user = "guest";
-our $pass = "p0o9i8u7";
+our $pass = "PASSWORD";
 our $dsn = "DBI:mysql:$db";
 our $cmapserver = "https://wheat.pw.usda.gov/cgi-bin/cmap";	#NL 29Oct2004
 our $gbrowseserver = "https://wheat.pw.usda.gov/cgi-bin/gbrowse";	#NL 29Oct2004

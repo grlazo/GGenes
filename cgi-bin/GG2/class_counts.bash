@@ -1,7 +1,7 @@
 #!/bin/bash
 # DDH 2005-09-11
 # creates cache file of class total row counts for innodb browsing
-mysql -u guest --password=^TFC5rdx -s graingenes <<EOF >| `dirname $0`/class_counts
+mysql -u guest --password=PASSWORD -s graingenes <<EOF >| `dirname $0`/class_counts
 select 'allele',count(*) from allele;
 select 'author',count(*) from author;
 select 'breakpoint',count(*) from breakpoint;

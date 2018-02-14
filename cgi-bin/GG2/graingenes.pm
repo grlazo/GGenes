@@ -14,10 +14,10 @@ our $js = "/home/www/htdocs/js"; #javascript dir
 sub new {
     my $class = shift;
     $class = ref($class) || $class;
-#    my $dbh = DBI->connect("DBI:mysql:graingenes:localhost","guest","passwd") || return undef;
-    my $dbh = DBI->connect("DBI:mysql:graingenes_myisam:localhost","guest","passwd") || return undef;
+#    my $dbh = DBI->connect("DBI:mysql:graingenes:localhost","guest","PASSWORD") || return undef;
+    my $dbh = DBI->connect("DBI:mysql:graingenes_myisam:localhost","guest","PASSWORD") || return undef;
 
-#my $dbh = DBI->connect("DBI:mysql:graingenes_maria:localhost","guest","passwd") || return undef;
+#my $dbh = DBI->connect("DBI:mysql:graingenes_maria:localhost","guest","PASSWORD") || return undef;
     my $cgi = new CGI || return undef;
     my $tmplfile = $0; $tmplfile =~ s/^.*\///; $tmplfile =~ s/\.cgi$/\.tmpl/;
     my $tmpl = undef;
